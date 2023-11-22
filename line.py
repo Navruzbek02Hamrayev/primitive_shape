@@ -1,3 +1,4 @@
+from math import sqrt
 class Line:
     def __init__(self, x1, y1, x2, y2) -> None:
         self.x1 = x1
@@ -14,4 +15,6 @@ class Line:
         Returns:
             float or int: distance.
         """
-        pass
+        return sqrt(abs(self.x1-self.x2)**2+abs(self.y1-self.y2)**2)
+line=Line(7,3,3,0)
+print(line.get_length())
